@@ -1,13 +1,12 @@
 class Changer
   def change(amount)
-    if amount == 15
-      [10,5]
-    elsif amount == 10
-      [10]
-    elsif amount >= 5
-      [5] + [1]*(amount-5)
-    else
-     [1]*amount
+    monedas = [10, 5, 1]
+    resto = amount
+    resultado = []
+    monedas.each do |moneda|
+      resultado += [moneda] * (resto / moneda)
+      resto %= moneda
     end
+    resultado
   end
 end

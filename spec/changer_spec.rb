@@ -20,4 +20,7 @@ describe Changer do
   it 'return one $10 and one $5 coins for 15 change' do
     expect( Changer.new.change(15) ).to eq([10,5])
   end
+  it 'return two $10, one $5, two $1 coins for 27 change' do
+    expect( Changer.new.change(27) ).to eq([10,10,5,1,1])
+  end
 end
