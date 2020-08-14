@@ -1,5 +1,10 @@
 class Changer
   def change(amount)
-    [1,0,0,0,0,0]
+    if amount >= 5
+      [5]
+    else
+
+     [1]*amount
+    end
   end
 end
